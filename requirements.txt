@@ -1,0 +1,6 @@
+Flask
+opencv-python
+matplotlib
+keras==2.3.1
+tensorflow==2.2.0
+numpy

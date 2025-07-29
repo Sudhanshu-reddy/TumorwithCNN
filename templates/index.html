@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Brain Tumor Detection System</h2>
+    <ul>
+        <li><a href="{{ url_for('train') }}">View Training Results</a></li>
+        <li><a href="{{ url_for('test') }}">Test Image</a></li>
+    </ul>
+</body>
+</html>

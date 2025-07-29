@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Upload Image</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h3>{{ result }}</h3>
+        <p><strong>Original:</strong></p>
+        <img src="{{ url_for('static', filename=input_img) }}">
+
+        <p><strong>Prediction Result:</strong></p>
+        <img src="{{ url_for('static', filename=result_img) }}">
+
+        {% if segmented_img %}
+            <p><strong>Tumor Segmented:</strong></p>
+            <img src="{{ url_for('static', filename=segmented_img) }}">
+            <p><strong>Edge Detection:</strong></p>
+            <img src="{{ url_for('static', filename=edge_img) }}">
+        {% endif %}
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Training Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Training Accuracy & Loss</h2>
+    <img src="{{ url_for('static', filename='line_chart.png') }}" alt="Line Chart">
+
+    <h2>Last Epoch Summary</h2>
+    <img src="{{ url_for('static', filename='bar_chart.png') }}" alt="Bar Chart">
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
